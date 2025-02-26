@@ -1,0 +1,4 @@
+.actionDiv {
+  display: flex;
+  justify-content: space-evenly;
+}

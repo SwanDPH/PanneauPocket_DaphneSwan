@@ -1,0 +1,23 @@
+{{ form_start(form, {'attr': {'class': 'formNew'}}) }}
+
+<div class="divInputLabel">
+    {{ form_label(form.title, 'Titre') }}
+    {{ form_widget(form.title) }}
+</div>
+
+<div class="divInputLabel">
+    {{ form_label(form.description, 'Description') }}
+    {{ form_widget(form.description) }}
+</div>
+
+<div class="divInputLabel">
+    {{ form_label(form.status, 'Statut') }}
+    {{ form_widget(form.status) }}
+</div>
+
+<div class="actionDiv">
+    <a class="seeButton" href="{{ path('app_task_index') }}">Retour à la liste des tâches</a>
+    <button class="btn buttonAdd">{{ button_label|default('Sauvegarder') }}</button>
+</div>
+
+{{ form_end(form) }}

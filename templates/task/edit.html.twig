@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Task{% endblock %}
+
+{% block body %}
+    <h1>Modification d'une Tâche</h1>
+
+    {{ include('task/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
+{% endblock %}

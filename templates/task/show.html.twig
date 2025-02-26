@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/task.css') }}">
+{% endblock %}
+
+{% block title %}Task{% endblock %}
+
+{% block body %}
+    <h1>Tâche</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ task.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ task.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ task.description }}</td>
+            </tr>
+            <tr>
+                <th>Statut</th>
+                <td>{{ task.status }}</td>
+            </tr>
+            <tr>
+                <th>Date de création</th>
+                <td>{{ task.createdAt ? task.createdAt|date('d-m-Y H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Créer il y a</th>
+                <td>{{createdDaysAgo}} jours</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="actionDiv">
+        <a class="btn seeButton" class="buttonReturn" href="{{ path('app_task_index') }}">Retour à la liste des tâches</a>
+    
+        <a class="btn editButton" href="{{ path('app_task_edit', {'id': task.id}) }}">Modifier</a>
+    
+        <form method="post" action="{{ path('app_task_delete', {'id': task.id}) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette tâche ?');">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ task.id) }}">
+            <button class="btn deleteButton">Supprimer</button>
+        </form>
+    </div>
+
+{% endblock %}

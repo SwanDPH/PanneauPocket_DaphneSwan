@@ -1,0 +1,92 @@
+.buttonAdd {
+  cursor: pointer;
+  text-decoration: none;
+  color: #007bff;
+  padding: 5px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  width: auto;
+  transition: background-color 0.3s;
+}
+
+.buttonAdd:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.buttonAdd:active {
+  background-color: #0056b3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.actionDiv a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #007bff;
+  padding: 5px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.actionDiv a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.actionDiv a:active {
+  background-color: #0056b3;
+}
+.actionDiv button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #007bff;
+  padding: 5px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.actionDiv button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.actionDiv button:active {
+  background-color: #0056b3;
+}
+
+.actionDiv .deleteButton {
+  color: #fff;
+  background-color: #fd5454;
+  border: 0px solid #007bff;
+}
+.actionDiv .deleteButton:hover {
+  color: #fff;
+  background-color: #fb6a6a;
+  border: 0px solid #007bff;
+}
+
+.actionDiv .seeButton {
+  background-color: #d9d9d9ac;
+  border: 0px solid #007bff;
+}
+.actionDiv .seeButton:hover {
+  color: #007bff;
+  background-color: #f5f3f3;
+  border: 0px solid #007bff;
+}
+
+.actionDiv .editButton {
+  background-color: #007bff;
+  color: #f5f3f3;
+  border: 0px solid #007bff;
+}
+.actionDiv .editButton:hover {
+  color: #007bff;
+  background-color: #f5f3f3;
+  border: 0px solid #007bff;
+}
